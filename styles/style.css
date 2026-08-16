@@ -90,6 +90,7 @@ html {
 
 .search-form__label:has(:focus-visible) {
  border: 1px solid #FFFFFF; 
+ 
 }
 
 .search-form__textfield {
@@ -245,7 +246,7 @@ span.content__accent {
   text-transform: uppercase;
   width: inherit;
   height: inherit;
-  white-space: nowrap;     
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; 
 }
@@ -261,7 +262,7 @@ span.content__accent {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  display: -webkit-box;           
+  display: -webkit-box;
   -webkit-box-orient: vertical;  
   -webkit-line-clamp: 1;          
   overflow: hidden;
