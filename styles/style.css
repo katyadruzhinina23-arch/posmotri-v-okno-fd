@@ -84,13 +84,10 @@ html {
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   cursor: pointer;
-
-
 }
 
 .search-form__label:has(:focus-visible) {
- border: 1px solid #FFFFFF; 
- 
+  border: 1px solid #FFFFFF;
 }
 
 .search-form__textfield {
@@ -269,10 +266,10 @@ span.content__accent {
 }
 
 .content__video-card-thumbnail {
-width: 194px;
-height: 103px;
-object-fit: cover;
-object-position: right center;
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: right center;
 }
 
 
