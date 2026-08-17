@@ -150,7 +150,7 @@ html {
 }
 
 .button:focus-visible {
-  outline: 1px solid #FFFFFF; 
+  outline: 1px solid #FFFFFF;
   outline-offset: 1px;
 }
 
@@ -245,8 +245,10 @@ span.content__accent {
   height: inherit;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
+
+
 
 .content__video-card {
   display: flex;
