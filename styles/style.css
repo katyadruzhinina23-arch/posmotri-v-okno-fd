@@ -4,6 +4,20 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   block-size: 100%;
 }
@@ -23,7 +37,6 @@ html {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  min-height: 534px;
   width: 1140px;
   column-gap: 30px;
   margin: auto;
@@ -31,22 +44,21 @@ html {
 
 .result {
   width: 711px;
-  min-height: 534px;
   margin: auto;
   padding-top: 76px;
+}
+
+.result__video {
+  width: 710px;
+  height: 386px;
+  object-fit: cover;
+  margin-bottom: -13px;
 }
 
 .result__video-container {
   position: relative;
   width: 711px;
   min-height: 386px;
-  margin-bottom: 16px;
-}
-
-.result__video {
-  width: 100%;
-  min-height: 100%;
-  object-fit: cover;
 }
 
 .search-form {
@@ -55,7 +67,7 @@ html {
   align-items: start;
   justify-content: space-between;
   width: 711px;
-  min-height: 54px;
+  margin-top: 12px;
 }
 
 .search-form__fieldset {
@@ -66,18 +78,20 @@ html {
   font-family: "Fira Sans Condensed", "sans-serif";
   font-weight: 400;
   font-size: 18px;
+  margin-top: 6px;
 }
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 15px;
+  gap: 21px;
+  margin-top: 4px;
 }
 
 .search-form__label {
   display: flex;
   align-items: center;
   width: fit-content;
-  gap: 3px;
+  gap: px;
 }
 
 .search-form__label:hover .search-form__label-text {
@@ -86,7 +100,7 @@ html {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .search-form__textfield {
@@ -94,9 +108,13 @@ html {
   border-bottom: 1px solid #ffffff;
   border-left: none;
   border-right: none;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
   color: #fff;
   background-color: #1b1919;
   appearance: none;
+  width: 225px;
+  margin-top: 5px;
 }
 
 .search-form__textfield:focus {
@@ -109,7 +127,7 @@ html {
 
 .search-form__pseudo-checkbox {
   width: 19px;
-  height: 22px;
+  height: 19px;
   border: 1px solid white;
   padding: 1px;
   cursor: pointer;
@@ -129,13 +147,14 @@ html {
 }
 
 .button {
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   border: 1px solid #ffffff;
   font-size: 18px;
   font-weight: bold;
   background-color: transparent;
   color: #ffffff;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .button:hover {
@@ -153,20 +172,17 @@ html {
 
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
-  margin-top: 20px;
   align-self: flex-end;
 }
 
 .more-button {
   width: 100%;
-  height: 34px;
-  margin-bottom: 3px;
 }
 
 .content__details {
   width: 399px;
-  height: 534px;
+  position: relative;
+  bottom: -3px;
 }
 
 .title {
@@ -174,12 +190,29 @@ html {
   font-family: "Oswald", "Raleway";
   font-weight: bold;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 67px;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 
 span.content__accent {
   color: #545050;
+  /*position: relative;*/
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 2.2ch;
+  margin-top: 5px;
+}
+
+.content__accent::after {
+  content: "-";
+  position: absolute;
+  left: 90px;
+  top: -3px;
+  color: currentColor;
+  font-size: 70px;
+  overflow: visible;
 }
 
 .content__list-container {
@@ -195,7 +228,8 @@ span.content__accent {
 .content__list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 19px;
+  margin-top: -5px;
 }
 
 .content__list-item {
@@ -224,10 +258,18 @@ span.content__accent {
   outline: 1px solid #ffffff;
 }
 
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 .content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
   width: 196px;
-  min-height: 103px;
   flex-grow: 1;
+  gap: 4px;
 }
 
 .content__video-card-title {
@@ -241,12 +283,7 @@ span.content__accent {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.content__video-card {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  gap: 30px;
 }
 
 .content__video-card-description {
@@ -256,8 +293,8 @@ span.content__accent {
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
   overflow: hidden;
 }
 
@@ -266,20 +303,7 @@ span.content__accent {
   height: 103px;
   object-fit: cover;
   object-position: right center;
-}
-
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-ol,
-li,
-blockquote,
-fieldset {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 5px;
 }
 
 ul,
