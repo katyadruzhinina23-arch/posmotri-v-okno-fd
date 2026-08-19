@@ -186,7 +186,6 @@ html {
 }
 
 .title {
-  margin-bottom: 26px;
   font-family: "Oswald", "Raleway";
   font-weight: bold;
   font-size: 75px;
@@ -197,22 +196,11 @@ html {
 
 span.content__accent {
   color: #545050;
-  /*position: relative;*/
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   width: 2.2ch;
   margin-top: 5px;
-}
-
-.content__accent::after {
-  content: "-";
-  position: absolute;
-  left: 90px;
-  top: -3px;
-  color: currentColor;
-  font-size: 70px;
-  overflow: visible;
 }
 
 .content__list-container {
